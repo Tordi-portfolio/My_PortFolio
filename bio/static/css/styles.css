@@ -1,0 +1,31 @@
+body{
+    background: white;
+}
+
+header{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+}
+#headertwo ul{
+    display: flex;
+    flex-direction: column;
+}
+#headertwo ul li a i{
+    padding: 10px;
+}
+#heaertwo ul li a {
+    text-decoration: none;
+}
+#headertwo ul li{
+    list-style: none;
+}
+/* @media screen and (max-width: ) {
+    
+} */
+#headeropenmenu{
+    font-size: 40px;
+}
+#headerclosemenu{
+    font-size: 40px
+}
