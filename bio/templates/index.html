@@ -1,5 +1,6 @@
 {% load static %}
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,8 +9,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.css" integrity="sha512-tx5+1LWHez1QiaXlAyDwzdBTfDjX07GMapQoFTS74wkcPMsI3So0KYmFe6EHZjI8+eSG0ljBlAQc3PQ5BTaZtQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/brands.css" integrity="sha512-aMFlN2yPSsRLLv40LrRPFMO0SGMs088xIKOngrwCpudSrf2vL/Q6gdHOmq6zSjDeow4PBaLtA932MuIu6mmYVw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Document</title>
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'fontawesome-free/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'app_name/css/fontawesome.min.css' %}">
+    <title>My Bio</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
     <style>
         body{
     background: white;
@@ -39,15 +42,25 @@ header{
 #headertwo ul li{
     list-style: none;
 }
-/* @media screen and (max-width: ) {
-    
-} */
 #headeropenmenu{
     font-size: 40px;
 }
 #headerclosemenu i{
     font-size: 40px;
     display: none;
+}
+#displaynavigator li i {
+    padding: 10px;
+}
+#displaynavigator li a {
+    text-decoration: none;
+}
+#displaynavigator li a:hover {
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
 }
 
 /* This is part is for the MAIN */
@@ -63,6 +76,22 @@ main{
     width: 50%;
     clip-path: circle(50%);
 
+}
+#mainimg ul {
+    display: flex;
+    padding-right: 30px;
+    justify-content: space-between;
+    margin-top: 0;
+}
+#mainimg ul li {
+    font-size: 50px;
+    list-style: none;
+}
+#mainimg ul li a {
+    text-decoration: none;
+}
+#mainimg ul li a i {
+    font-size: 30px;
 }
 #mainone #mainname {
     font-size: 33px;
@@ -89,6 +118,24 @@ main{
     width: 50%;
     height: auto;
     font-size: 20px;
+}
+#maintwo #courses{
+    text-align: center;
+}
+#maintwo #courses ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    text-align: center;
+}
+#maintwo #courses ul li {
+    list-style: none;
+    padding-right: 30px;
+    margin: 10px;
+}
+#maintwo #courses ul li i {
+    font-size: 40px;
+    padding: 10px;
 }
 #maintwoone{
     font-size:80px;
@@ -138,6 +185,9 @@ main{
 #mainfour{
     text-align: center;
 }
+#mainfour img {
+    width: 10%;
+}
 
 /* This s for MAINFOUR */
 #mainfour{
@@ -177,6 +227,46 @@ main{
     color: #ccc;
 }
 
+#mainfive h2 {
+    padding: 10px;
+}
+#mainfiveoneone ul {
+    text-align: center;
+    padding: 20px;
+}
+#mainfiveone ul li {
+    list-style: decimal;
+    padding: 10px;
+}
+#mainfiveone ul li a {
+    text-decoration: none;
+    color: #000;
+}
+#mainfive {
+    background-color: #ccc;
+}
+#mainfive h2 {
+    text-align: center;
+    padding: 20px;
+}
+
+#mainsix {
+    background-color: #ccc;
+}
+#mainsix h3 {
+    padding: 10px;
+}
+#mainsix #mainsixone ul li img {
+    width: 60%;
+    border-radius: 10px;
+}
+#mainsix #mainsixone ul li {
+    list-style: none;
+}
+#mainsix #mainsixone ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
 
 
 /* Media query for Samsung Galaxy S9+ */
@@ -301,6 +391,13 @@ main{
 /* Media query for iPhone 6/7/8 */
 /* CSS styles specific to iPhone 6/7/8 */
 @media only screen and (max-width: 667px) and (min-width: 414px) {
+    #displaynavigator li i {
+        padding: 10px;
+    }
+    #displaynavigator li a {
+        text-decoration: none;
+        font-size: 20px;
+    }
     header #headerone img {
         width: 110px;
     }
@@ -349,6 +446,23 @@ main{
     #mainfourthree form button {
         font-size: 20px;
     }
+    #mainsix {
+        background-color: #ccc;
+    }
+    #mainsix h3 {
+        padding: 10px;
+    }
+    #mainsix #mainsixone ul li img {
+        width: 60%;
+        border-radius: 10px;
+    }
+    #mainsix #mainsixone ul li {
+        list-style: none;
+    }
+    #mainsix #mainsixone ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 
@@ -362,6 +476,9 @@ main{
         #mainone #mainimg {
             width: 50%;
             padding-left: 370px;
+        }
+        header #headertwo #displaynavigator {
+            font-size: 20px;
         }
     }
 
@@ -377,18 +494,52 @@ main{
         }
     } 
 
+    /* Media query for samsung galaxy ao3s and a10 */
+    /* CSS styles specific to samsung galaxy ao3s and a10 */
+    @media only screen and (max-width: 720px) and (min-width: 320px) {
+        header #headertwo #displaynavigator {
+            font-size: 15px;
+        }
+        #displaynavigator li i {
+            padding: 10px;
+        }
+        #displaynavigator li a {
+            text-decoration: none;
+        }
+        #courses ul li i {
+            width: 10px;
+            padding-left: 10px;
+        }
+        #mainsix {
+            background-color: #ccc;
+        }
+        #mainsix h3 {
+            padding: 10px;
+        }
+        #mainsix #mainsixone ul li img {
+            width: 80%;
+            border-radius: 10px;
+        }
+        #mainsix #mainsixone ul li {
+            list-style: none;
+        }
+        #mainsix #mainsixone ul {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
 
 
     </style>
-<body>
+<body id="body">
     
     <header>
         <div id="headerone">
-            <img src="../static/img/logo2.jpg" alt="">
+            <img src="../static/img/logo.jpg" alt="">
         </div>
         <div id="headertwo">
             <ul id="displaynavigator">
-
+                
             </ul>
             <div id="headeropenmenu" onclick="navigatoropen()">
                 <i class="fa fa-bars" aria-hidden="true"></i>
@@ -399,12 +550,12 @@ main{
         </div>
     </header><hr>
 
-    <main>
+    <main id="main">
         
         <div id="mainone">
             <div id="mainjoin">
                 <div id="mainname">
-                    <h2>Hello, My Name Is Tordi</h2>
+                    <h2 style="font-size: 35px;">Hello, My Name Is <span>Gbarabe Tordi Joseph</span></h2>
                 </div>
     
                 <div id="mainjob">
@@ -414,12 +565,32 @@ main{
 
             <div id="mainimg">
                 <img src="../static/img/picture2.jpg" alt="">
+                <ul>
+                    <li><a href="https://github.com/Tordi-portfolio?tab=repositories"><i class="fab fa-github"></i></a></li>
+                    <li><a href="https://www.facebook.com/tordi.friday.79"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+                    <li><a href="https://www.instagram.com/tordi190?igsh=YzljYTk1ODg3Zg=="><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-telegram"></i></a></li>
+                    <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+                </ul>
             </div>
 
         </div><hr>
 
         <div id="maintwo">
             <h2>ABOUT ME</h2>
+            <div id="aboutparagraph">
+                <p>I'm Gbarabe Tordi Joseph, a passionate full-stack developer with 3 years of experience crafting dynamic web applications. My journey in the programming world began with a fascination for the interplay between creativity and logic. Translating ideas into functional interfaces and robust backends fuels my drive to continuously learn and explore new technologies.
+
+                    My skillset encompasses both front-end and back-end development, allowing me to traverse the entire web development landscape. I'm proficient in crafting visually appealing user interfaces with HTML, CSS, and JavaScript frameworks like Bootstrap. My fluency in languages like Python and Django empowers me to build robust backends that seamlessly power these interfaces.
+                    
+                    Consistency and a meticulous approach are hallmarks of my development style. I believe in writing clean and well-documented code, ensuring applications are maintainable and scalable. Collaboration is another key value in my work style. Whether it's brainstorming with designers or working alongside back-end specialists, I thrive in an environment where ideas are exchanged and solutions are crafted together.
+                    
+                    My passion for software development extends beyond the code itself. I'm an active learner, constantly seeking to expand my knowledge base and stay abreast of the latest advancements in the field. Contributing to open-source projects and engaging in online developer communities fuels my growth and allows me to share my expertise with the wider programming world.
+                    
+                    Looking ahead, I'm eager to leverage my skills and enthusiasm to tackle new challenges and contribute to impactful projects. I'm always excited to collaborate with talented individuals and build innovative solutions that bridge the gap between design and functionality.</p>
+            </div>
             <div id="maintwoone">
                 <i class="fa fa-graduation-cap" aria-hidden="true"></i>
             </div>
@@ -428,12 +599,16 @@ main{
             </div>
             <div id="maintwotwo">
                 <div id="maintwotwoone">
-                    <ul id="firsteducation">
-
-                    </ul>
-                    <ul id="secondeducation">
-                        
-                    </ul>
+                    <div id="courses">
+                        <ul>
+                            <li><i class="fab fa-html5"></i></li>
+                            <li><i class="fab fa-css3"></i></li>
+                            <li><i class="fab fa-bootstrap"></i></li>
+                            <li><i class="fab fa-js-square"></i></li>
+                            <li><i class="fab fa-python"></i></li>
+                            <li><i class="fab fa-github"></i></li>
+                        </ul>
+                </div>
                     <div id="buttonnav">
                         <button onclick="courses()">MORE</button>
                     </div>
@@ -464,6 +639,7 @@ main{
                     <p>Empowering youths and learners to reach thier full potentializes guidiance and support, fastering a deep understand of complex languages in an engaging and effective m.anner</p>
                 </div>
             </div>
+            
         </div>
         <div id="mainfour">
             <div id="mainfourone">
@@ -478,87 +654,67 @@ main{
                     <input type="email" name="" id="" placeholder="Email..."><br><br>
                     <input type="text" name="" id="" placeholder="Full Name..."><br><br>
                     <input type="text" name="" id="" placeholder="Message"><br><br>
-                    <button type="submit">Login</button>
+                    <button type="submit">Submit</button>
                 </form>
+            </div>
+        </div><hr>
+
+        <div id="mainfive">
+            <h3>CHECK OUT MY SITES</h3>
+            <div id="mainfiveone">
+                <ul>
+                    <li><a href="Https://tordicv.pythonanywhere.com">My CV</a></li>
+                    <li><a href="Https://tordichatapp.pythonanywhere.com">Chat App</a></li>
+                    <li><a href="Https://tordicalculator.pythonanywhere.com">Calculator App</a></li>
+                    <li><a href="Https://maryjaneblogg.pythonanywhere.com">MaryJane Blog</a></li>
+                    <li><a href="Https://goodnesblog.python anywhere.com">Goodness Blog</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="mainsix">
+            <h3>CERTIFICATIONS</h3>
+            <div id="mainsixone">
+                <ul>
+                    <li><img src="../static/img/Screenshot_20240423_213401_Image to PDF Converter.jpg" alt=""></li>
+                    <li><img src="../static/img/Screenshot_20240423_213417_Image to PDF Converter.jpg" alt=""></li>
+                    <li><img src="../static/img/Screenshot_20240423_213612_Image to PDF Converter.jpg" alt=""></li>
+                    <li><img src="../static/img/Screenshot_20240424_062929_Image to PDF Converter.jpg" alt=""></li>
+                    <li><img src="../static/img/Screenshot_20240424_063156_Image to PDF Converter.jpg" alt=""></li>
+                    <li><img src="../static/img/Screenshot_20240424_063223_Image to PDF Converter.jpg" alt=""></li>
+                    <li><img src="../static/img/Screenshot_20240424_063223_Image to PDF Converter.jpg" alt=""></li>
+                    <li><img src="../static/img/Screenshot_20240424_063307_Image to PDF Converter.jpg" alt=""></li>
+                    <li><img src="../static/img/Screenshot_20240424_063329_Image to PDF Converter.jpg" alt=""></li>
+                    <li><img src="../static/img/Screenshot_20240424_063347_Image to PDF Converter.jpg" alt=""></li>
+                </ul>
             </div>
         </div>
 
     </main>
 
-    <footer></footer>
+    <footer id="footer">
+        <p>&copy; copy right, 2024 By 'Tech By Tordi LTD'.</p>
+    </footer>
 
-    <script>
+    <style>
+        footer {
+            background-color: black;
+            color: white;
+            margin: 0;
+            padding: 30px;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+            cursor: pointer;
+        }
+        footer p {
+            padding-top: 30px;
+            font-size: 15px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+    </style>
 
-// This is the header javascript
-let display = 0;
-let navigatorlist = document.getElementById('displaynavigator')
-let openmenu = document.getElementById('headeropenmenu')
-let closemenu = document.getElementById('headerclosemenu')
-
-function navigatoropen() {
-    if (display == 0){
-        navigatorlist.innerHTML = `
-            <li><a href="#"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
-            <li><a href="#"><i class="fa fa-question-circle" aria-hidden="true"></i> About</a></li>
-            <li><a href="#"><i class="fa fa-server" aria-hidden="true"></i> Services</a></li>
-            <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i> Contact</a></li>
-        `
-        openmenu.innerHTML = ''
-        closemenu.innerHTML = `
-            <style>
-                #headerclosemenu i{
-                    font-size: 40px;
-                    display: inline-block;
-                }
-            </style>
-            <i class="fa fa-times" aria-hidden="true"></i>
-        `
-        closemenu.style.display = 'block'
-        display = 0
-    }
-}
-function navigatorclose() {
-    if (display == 0){
-        navigatorlist.innerHTML = ''
-        openmenu.innerHTML = `
-            <i class="fa fa-bars" aria-hidden="true"></i>
-        `
-        closemenu.innerHTML = ''
-        display = 0
-    }
-}
-
-
-// This part is the courses javascript
-
-let course1 = document.getElementById('firsteducation')
-let course2 = document.getElementById('secondeducation')
-let show = 0
-
-function courses() {
-    if (show == 0) {
-        course1.innerHTML = `
-            <li><span style="font-size: 20px;"><b>FIRST SCHOOL LEAVING CERTIFICATE</b></span> - Acquired a first school leaving certificate.</li>
-            <li><span style="font-size: 20px;"><b>WAEC</b></span> - Acquired both Junior and Senior WAEC certificate.</li>
-            <li><span style="font-size: 20px;"><b>BSC</b></span> - Currently a student of the university of port harcourt .</li>
-            <li><span style="font-size: 20px;"><b>GREAT LEARNING</b></span> - Finshed several courses in GREAT LEARNING</li>
-            <li><span style="font-size: 20px;"><b>ALX AFRICA</b></span> - Graduated from ALX AFRICA</li>
-        `
-        course2.innerHTML = ''
-        show = 0
-    }
-
-    else {
-        course1.innerHTML = ''
-        course2.innerHTML = `
-            <i class="fa fa-code" aria-hidden="true"></i>
-            <i class="fa fa-code-fork" aria-hidden="true"></i>
-        `
-        show = 1
-    }
-}
-courses() 
-
-    </script>
 </body>
+<script src="../static/js/style.js"></script>
 </html>
